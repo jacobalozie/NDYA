@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="NDYA.css">
+  <title>NDYA</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <img src="logo.webp" alt="NDYA Logo" class="logo-img">
+      <span class="logo-text">NDYA</span>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">Who We Are</a>
+      <a href="#projects">Our Projects</a>
+      <a href="#resources">Resources</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+  </nav>
+
+  <div class="ngo-hero-container">
+    <div class="ngo-hero-content">
+      <div class="ngo-logo-container">
+        <img src="logo.webp" alt="NGO Logo" class="ngo-logo">
+      </div>
+      <h2 class="ngo-abbreviation">NDYA</h2>
+      <p class="ngo-fullname">Nigerian Diaspora Youth Ambassador</p>
+      <p class="ngo-motto">Dream, Believe and Achieve</p>
+      <button class="ngo-welcome-btn">Welcome</button>
+    </div>
+  </div>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p> <!-- You can replace this text -->
+      The Nigerian Diaspora Youth Ambassador (NDYA) is a youth-led organization committed to standing for the rights, development, and empowerment of Nigerian youths in the diaspora and at home. Founded by Ambassador David Victor Alozie, NDYA champions the voice of Nigerian youth on the global stage — promoting unity, leadership, and purposeful engagement.
+
+Officially registered with the Corporate Affairs Commission (CAC) and working closely with NIDCOM (Nigerians in Diaspora Commission), NDYA serves as a bridge between young Nigerians abroad and at home — creating opportunities for growth, collaboration, and national progress.
+
+Through impactful events, scholarships, conferences, and youth empowerment programs, we equip the next generation with tools to lead, thrive, and give back to their communities.
+
+Guided by our core mantra — “Dream, Believe, and Achieve” — we are building a global movement of Nigerian youth dedicated to peace, progress, and a better tomorrow.
+    </p>
+  </section>
+
+  <div class="slider" id="home">
+    <div class="slides">
+      <img src="image1.jpg">
+      <img src="image3.jpg">
+      <img src="image4.jpg">
+      <img src="football tournament 1.jpg">
+      <img src="independemce day.jpg">
+    </div>
+  </div>
+
+  <section id="engagement">
+    <h2>Youth Engagement</h2>
+    <p> <!-- You can replace this text -->
+      At NDYA, we believe that the future of Nigeria lies in the hands of its youth — both at home and across the globe. That’s why Youth Engagement is at the heart of everything we do.
+
+      We create platforms that amplify youth voices, support leadership development, and promote active participation in nation-building. Our engagement initiatives include:
+      
+      🎓 Scholarship Programs to support academic excellence
+      
+      🌍 Diaspora Youth Conferences to unite and inspire global minds
+      
+      🗣️ Leadership Workshops & Mentorship for skills and personal growth
+      
+      🤝 Community Service & Outreach Projects
+      
+      🎤 Cultural, Social, and Advocacy Events that bring youth together
+      
+      Through these programs, we empower Nigerian youth to dream big, lead boldly, and become active contributors to a better future.
+      
+      Together, we are building a generation that doesn’t wait for change — we lead it.
+    </p>
+  </section>
+
+<!-- Add this where you want the gallery -->
+<div class="simple-gallery">
+  <h2 class="gallery-title">Our Gallary ✨</h2>
+  <div class="gallery-grid" id="js-gallery"></div>
+</div>
+
+  <footer id="contact">
+    <p>&copy; 2025 NDYA. All rights reserved.</p>
+    <p>Follow us on Instagram: <a href="https://instagram.com/ndyahq" target="_blank">@ndyahq</a></p>
+  </footer>
+
+
+  <script>
+    // 1. Add your 10 image paths here
+    const images = [
+      'imag13.jpg',
+      'excos.jpg',
+      'image1.jpg',
+      'image2.jpg',
+      'football tournament 1.jpg',
+      'football tournament2.jpg',
+      'image3.jpg',
+      'image4.jpg',
+      'image5.jpg',
+      'image6.jpg',
+      'image7.jpg',
+      'image8.jpg',
+      'image9.jpg',
+      'image10.jpg',
+      'image11.jpg',
+      'image12.jpg',
+      'image14.jpg',
+      'image15.jpg',
+      'image16.jpg',
+      'image17.jpg',
+      'image18.jpg',
+      'image19.jpg',
+      'image20.jpg',
+      'image21.jpg',
+      'image22.jpg',
+      'image23.jpg',
+      'image24.jpg',
+      'image25.jpg',
+      'image26.jpg',
+      'image27.jpg',
+      
+    ];
+  
+    // 2. Create gallery when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+      const gallery = document.getElementById('js-gallery');
+      
+      // 3. Insert images into gallery
+      images.forEach(imgSrc => {
+        gallery.innerHTML += `
+          <div class="gallery-item">
+            <img src="${imgSrc}" alt="Gallery image">
+          </div>
+        `;
+      });
+      
+      // 4. Simple lightbox functionality
+      const lightbox = document.createElement('div');
+      lightbox.className = 'lightbox';
+      lightbox.innerHTML = `
+        <span class="close-btn">&times;</span>
+        <img src="" alt="">
+      `;
+      document.body.appendChild(lightbox);
+      
+      // 5. Click to open images
+      document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', () => {
+          lightbox.style.display = 'flex';
+          lightbox.querySelector('img').src = img.src;
+        });
+      });
+      
+      // 6. Close lightbox
+      lightbox.querySelector('.close-btn').addEventListener('click', () => {
+        lightbox.style.display = 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>

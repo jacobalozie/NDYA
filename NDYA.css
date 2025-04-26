@@ -1,0 +1,314 @@
+      body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fffaf0;
+      color: #222;
+    
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(to right, #0d3b66, #145da0);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo-img {
+      height: 40px;
+      width: auto;
+      margin-right: 10px;
+      border-radius: 50%; /* Optional: make it circular */
+    }
+    
+    .logo-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #f8b500;
+    }
+    
+    .logo:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    .slider {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      position: relative;
+    }
+    .slides {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      animation: slide 15s infinite;
+    }
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @keyframes slide {
+      0% { margin-left: 0; }
+      33% { margin-left: -100%; }
+      66% { margin-left: -200%; }
+      100% { margin-left: 0; }
+    }
+
+
+  /* NGO Hero Container - Adjust height as needed */
+  .ngo-hero-container {
+    width: 100%;
+    height: 80vh; /* Adjust this value (60vh, 70vh, 80vh, 100vh etc.) */
+    min-height: 500px; /* Minimum height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url('independemce\ day.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .ngo-hero-content {
+    max-width: 800px;
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+  }
+
+  .ngo-logo-container {
+    width: 180px; /* Slightly larger for better fit */
+    height: 180px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures rounded edges */
+  }
+
+  .ngo-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Maintains aspect ratio */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    border-radius: 50%; /* Ensures rounded corners */
+  }
+  /* .ngo-logo {
+    max-width: 80%;
+    max-height: 80%;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+  } */
+
+  .ngo-abbreviation {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 3px;
+  }
+
+  .ngo-fullname {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .ngo-motto {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .ngo-motto::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: white;
+  }
+
+  .ngo-welcome-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 35px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .ngo-welcome-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .ngo-hero-container {
+      height: 70vh; /* Adjust mobile height */
+      min-height: 400px;
+    }
+    
+    .ngo-abbreviation {
+      font-size: 2.5rem;
+    }
+    
+    .ngo-fullname {
+      font-size: 1.2rem;
+    }
+  }
+
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #0d3b66;
+      margin-bottom: 1rem;
+    }
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+     /* Simple Creative Styles */
+  .simple-gallery {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .gallery-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+  }
+  
+  .gallery-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+    margin: 10px auto 0;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    aspect-ratio: 1;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Minimal Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+    footer {
+      background-color: #0d3b66;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: #f8b500;
+      text-decoration: none;
+    }
+
+
+   
